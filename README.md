@@ -20,3 +20,17 @@ development including:
 The code is heavily documented so that the reader can understand
 why certain strategies are needed in specific situations.
 
+
+ToDo
+----
+
+We still need an activation hook that adds the MySQL table
+used throughout the plugin.  Until that hook is in place, you'll need
+to add the table to MySQL manually.  To add the table, run the following
+command:
+
+    CREATE TABLE wp_smashing_user_log ( user_id INTEGER PRIMARY KEY, last_activity DATETIME NOT NULL);
+
+Be sure to replace `wp_` with whatever database table prefix is used by
+your WordPress install.
+
